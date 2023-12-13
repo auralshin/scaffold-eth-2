@@ -5,7 +5,8 @@
   "workspaces": {
     "packages": [
       "packages/hardhat",
-      "packages/nextjs"
+      "packages/nextjs",
+      "packages/server"
     ]
   },
   "scripts": {
@@ -27,7 +28,11 @@
     "postinstall": "husky install",
     "precommit": "lint-staged",
     "vercel": "yarn workspace @se-2/nextjs vercel",
-    "vercel:yolo": "yarn workspace @se-2/nextjs vercel:yolo"
+    "vercel:yolo": "yarn workspace @se-2/nextjs vercel:yolo",
+    "nest:build": "yarn workspace @se-2/server build",
+    "nest:start": "yarn workspace @se-2/server start:dev",
+    "nest:start-debug": "yarn workspace @se-2/server start:debug",
+    "nest:lint": "yarn workspace @se-2/server lint"
   },
   "packageManager": "yarn@3.2.3",
   "devDependencies": {
